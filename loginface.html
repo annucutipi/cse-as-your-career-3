@@ -1,0 +1,69 @@
+<body background="C:\Users\admin\Downloads\networknanu.jpg">
+
+<h1>WELCOME TO CSE AS CAREER</br>WE GUIDE YOU FOR SUCESS</br>
+
+<input type="file" accept="image/jpeg, image/png, image/jpg">
+<output></output></br>
+Email:<input type="email"></br>
+password:<input type="password"></br>
+<button onclick ="submit()"><a href="file:///C:/Users/admin/Documents/testing.html">submit</a></button></h1>
+<style>
+h1{
+color:white;
+text-align:center;
+border-style:ridge;
+padding:80;
+margin:80;
+}img{
+height:40%;
+width:40%;
+background:grey;}
+</style>
+
+
+
+
+
+
+<script>
+function submit(){
+window.alert ("your details submitted sucessfully");
+}
+const input = document.querySelector("input")
+const output = document.querySelector("output")
+let imagesArray = []
+input.addEventListener("change", function() {})
+input.addEventListener("change", () => {
+   const file = input.files
+
+
+  
+})
+
+input.addEventListener("change", () => {
+  const file = input.files
+  imagesArray.push(file[0])
+  displayImages()
+})
+
+function displayImages() {
+  let images = ""
+  imagesArray.forEach((image, index) => {
+    images += `<div class="image">
+                <img src="${URL.createObjectURL(image)}" alt="image">
+                <span onclick="deleteImage(${index})">&times;</span>
+              </div>`
+  })
+  output.innerHTML = images
+}
+function deleteImage(index) {
+  imagesArray.splice(index, 1)
+  displayImages()
+}
+
+
+</script>
+
+
+
+

@@ -1,0 +1,286 @@
+<html>
+<head>
+<title>input image</title>
+</head><h2>
+WELCOME TO CSE AS CAREER GET MOTIVATED
+<header>
+
+<body background="C:\Users\admin\Downloads\networknanu.jpg">
+
+
+
+
+
+<div class="main">
+
+    
+   LIKE MY PAGE <button id="clickme">like</button>
+
+  
+
+  </div>
+
+
+
+
+
+<input type="file" accept="image/jpeg, image/png, image/jpg">
+<output></output>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+COMMENT ON MY PAGE
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Box</title>
+    <link rel="stylesheet" href="style.css">
+
+   
+    <input type="text" id="comment-box" placeholder="Enter comment">
+    <button id="post">Post</button>
+    <ul id="unordered">
+       
+   </ul>
+   
+    <script src="code.js"></script>
+
+
+
+
+
+
+
+
+
+
+<img src="C:\Users\admin\Desktop\motiationme\src\assets\images\1quotes.jpg"></br>
+<img src="C:\Users\admin\Desktop\motiationme\src\assets\images\2quote.jpg"></br>
+<img src="C:\Users\admin\Desktop\motiationme\src\assets\images\3quoteedit.jpg"></br>
+<img src="C:\Users\admin\Desktop\motiationme\src\assets\images\4quoteedit.jpg"></br>
+<img src="C:\Users\admin\Desktop\motiationme\src\assets\images\8quote.jpg"></br>
+<img src="C:\Users\admin\Desktop\motiationme\src\assets\images\10quote.png"></br>
+
+
+
+
+
+
+
+
+
+
+
+
+</h2>
+</header>
+
+
+
+
+<style>
+.hi
+{
+
+height:100px;
+width:100px;
+}
+img{
+height:200;
+width:200;
+background:grey;
+border-style:ridge;
+}
+h2{
+color:white;}
+
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+
+
+const input = document.querySelector("input")
+const output = document.querySelector("output")
+let imagesArray = []
+
+
+let countArray = []
+
+
+
+
+input.addEventListener("change", function() {})
+input.addEventListener("change", () => {
+   const file = input.files
+
+
+  
+})
+
+input.addEventListener("change", () => {
+  const file = input.files
+  imagesArray.push(file[0])
+
+
+
+
+countArray.push(count[0])
+
+
+
+
+  displayImages()
+})
+
+function displayImages() {
+  let images = ""
+  imagesArray.forEach((image, index) => {
+    images += `<div class="image">
+                <img src="${URL.createObjectURL(image)}" alt="image">
+                <span onclick="deleteImage(${index})">&times;</span>
+              </div>`
+
+
+
+
+
+  })
+
+
+
+var button = document.getElementById("clickme"),
+  count = 0;
+button.onclick = function() {
+  count += 1
+  button.innerHTML =  count;
+};
+
+
+
+
+
+  output.innerHTML = images
+
+button.innerHTML = "like " + count;
+
+}
+function deleteImage(index) {
+  imagesArray.splice(index, 1)
+  displayImages()
+}
+
+
+
+
+
+
+
+var button = document.getElementById("clickme"),
+  count = 0;
+button.onclick = function() {
+  count += 1;
+  button.innerHTML = "like " + count;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var post= document.getElementById("post");
+post.addEventListener("click", function(){
+    var commentBoxValue= document.getElementById("comment-box").value;
+ 
+    var li = document.createElement("li");
+    var text = document.createTextNode(commentBoxValue);
+    li.appendChild(text);
+    document.getElementById("unordered").appendChild(li);
+ 
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+<style>
+content
+{
+
+height:10px;
+width:10px;
+}
+h4{
+color:white;
+}
+
+</style>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<html>
+<head>
+<title>input image</title>
+</head>
+
+<body>
+<body background="C:\Users\admin\Downloads\networknanu.jpg">
+
+<input type="file" accept="image/jpeg, image/png, image/jpg">
+<output></output>
+
+
+
+
+<script>
+const input = document.querySelector("input")
+const output = document.querySelector("output")
+let imagesArray = []
+input.addEventListener("change", function() {})
+input.addEventListener("change", () => {
+   const file = input.files
+
+
+  
+})
+
+input.addEventListener("change", () => {
+  const file = input.files
+  imagesArray.push(file[0])
+  displayImages()
+})
+
+function displayImages() {
+  let images = ""
+  imagesArray.forEach((image, index) => {
+    images += `<div class="image">
+                <img src="${URL.createObjectURL(image)}" alt="image">
+                <span onclick="deleteImage(${index})">&times;</span>
+              </div>`
+  })
+  output.innerHTML = images
+}
+function deleteImage(index) {
+  imagesArray.splice(index, 1)
+  displayImages()
+}
+
+
+</script>
+<h5>Contact </h5>
+<img src="C:\Users\admin\Downloads\email.jpg">&nbsp;   <input type="text" placeholder="Email"><br>
+<img src="C:\Users\admin\Downloads\phone.png">&nbsp;<input type="number" placeholder="Phonenumber"><br>
+<img src="C:\Users\admin\Downloads\location.png">&nbsp;<input type="text" placeholder="Address"><br>
+
+
+
+<h5>Personal Details</h5>
+<h5>Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:<input type="text"><br></h5>
+<h5>Date Of Birth&nbsp;:<input type="date" ><br></h5>
+<h5>Nationality  &nbsp;&nbsp;&nbsp;&nbsp;:<input type="text" ><br></h5>
+<h5>Martial Status:<input type="text" ><br></h5>
+<h5>Skills  </h5><br>
+<textarea></textarea>
+<br>
+<h5>languages</h5>:<br>
+<textarea></textarea>
+
+<h5>Objective</h5></br>
+<textarea></textarea>
+<h5>Education</h5><br>
+<textarea></textarea>
+
+
+<h5>Intrests</h5></br>
+<textarea></textarea>
+<h5>projects</h5><br>
+<textarea></textarea>
+<h5>Additional Information</h5>
+<textarea></textarea>
+
+
+<style>
+
+h5
+{
+ color: white;
+}
+
+</style>
+<a title="Print Screen" alt="Print Screen" onclick="window.print();" target="_blank" style="cursor:pointer;" >PRINT BUTTON</a>
+
+
+
+</body>
+<html>
